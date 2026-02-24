@@ -1,0 +1,249 @@
+/* ── Google Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --octo-bg:        #f0f2f5;
+  --octo-dark:      #1a1a2e;
+  --octo-mid:       #16213e;
+  --octo-blue:      #0f3460;
+  --octo-red:       #e94560;
+  --octo-light-txt: #ccd6f6;
+  --octo-card-bg:   #ffffff;
+  --octo-hover-row: #eef1fb;
+  --octo-shadow:    0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Global ── */
+body {
+  background-color: var(--octo-bg);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
+}
+
+/* ── Global headings ── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--octo-blue);
+}
+
+/* ── Global links ── */
+a {
+  color: var(--octo-red);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #b5203a;
+  text-decoration: underline;
+}
+
+/* ── Global buttons ── */
+.btn-primary {
+  background-color: var(--octo-blue)  !important;
+  border-color:     var(--octo-blue)  !important;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background-color: var(--octo-dark) !important;
+  border-color:     var(--octo-dark) !important;
+}
+.btn-danger {
+  background-color: var(--octo-red) !important;
+  border-color:     var(--octo-red) !important;
+  font-weight: 600;
+}
+.btn-danger:hover {
+  background-color: #b5203a !important;
+  border-color:     #b5203a !important;
+}
+.btn-outline-light {
+  font-weight: 600;
+  border-width: 2px;
+}
+
+/* ── Navbar ── */
+.octofit-navbar {
+  background: linear-gradient(135deg, var(--octo-dark) 0%, var(--octo-mid) 60%, var(--octo-blue) 100%) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.octofit-navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--octo-red) !important;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.octofit-navbar .navbar-brand img {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  padding: 2px;
+}
+
+.octofit-navbar .nav-link {
+  color: var(--octo-light-txt) !important;
+  font-weight: 500;
+  padding-left: 0.9rem !important;
+  padding-right: 0.9rem !important;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.octofit-navbar .nav-link:hover {
+  color: var(--octo-red) !important;
+  background: rgba(233, 69, 96, 0.1);
+}
+
+.octofit-navbar .nav-link.active {
+  color: var(--octo-red) !important;
+  background: rgba(233, 69, 96, 0.15);
+  font-weight: 600;
+}
+
+/* ── Hero ── */
+.octofit-hero {
+  background: linear-gradient(135deg, var(--octo-dark) 0%, var(--octo-blue) 100%);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.octofit-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top left, rgba(233,69,96,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.octofit-hero .hero-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  padding: 6px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.octofit-hero h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--octo-red);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.octofit-hero p {
+  color: var(--octo-light-txt);
+  font-size: 1.15rem;
+}
+
+.octofit-hero .hero-links .btn {
+  margin: 0.4rem;
+  min-width: 130px;
+  font-weight: 600;
+}
+
+/* ── Cards ── */
+.octofit-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: var(--octo-shadow);
+  background: var(--octo-card-bg);
+  overflow: hidden;
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(135deg, var(--octo-dark) 0%, var(--octo-blue) 100%);
+  color: var(--octo-red);
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  border-bottom: 3px solid var(--octo-red);
+  letter-spacing: 0.3px;
+}
+
+.octofit-card .card-body {
+  background: var(--octo-card-bg);
+}
+
+/* ── Tables ── */
+.octofit-table {
+  margin-bottom: 0;
+}
+
+.octofit-table thead th {
+  background-color: var(--octo-blue);
+  color: var(--octo-red);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border: none;
+  padding: 0.85rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.octofit-table tbody td {
+  padding: 0.8rem 1rem;
+  vertical-align: middle;
+  border-color: #e9ecef;
+  color: #343a40;
+}
+
+.octofit-table tbody tr:nth-child(even) {
+  background-color: #f5f7ff;
+}
+
+.octofit-table tbody tr:hover {
+  background-color: var(--octo-hover-row);
+}
+
+/* ── Footer ── */
+footer {
+  background-color: var(--octo-dark);
+  color: var(--octo-light-txt) !important;
+  padding: 1.2rem 0;
+  margin-top: 3rem;
+}
+
+footer small {
+  color: var(--octo-light-txt);
+  opacity: 0.8;
+}
+
+/* ── Badges ── */
+.rank-badge {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  background-color: #0f3460;
+  color: #e94560;
+  font-weight: 700;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.rank-badge.gold   { background-color: #ffc107; color: #1a1a2e; }
+.rank-badge.silver { background-color: #adb5bd; color: #1a1a2e; }
+.rank-badge.bronze { background-color: #cd7f32; color: #fff; }
+
+/* ── Alerts ── */
+.octofit-alert {
+  border-radius: 8px;
+}
